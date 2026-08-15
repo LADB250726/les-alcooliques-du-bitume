@@ -3,36 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Les Alcooliques du Bitume — VTC ETS2. Une communauté de passionnés d'Euro Truck Simulator 2.">
+  <meta name="description" content="Les Alcooliques du Bitume — VTC ETS2">
   <title>Les Alcooliques du Bitume — VTC ETS2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- =========================================================
+       🟠 ZONE FACILE À MODIFIER
+       =========================================================
+       Tu peux modifier ici les informations principales.
+       Le site se met à jour après "Commit changes" sur GitHub.
+
+       DISCORD
+       https://discord.gg/JSXcqKbQfv
+
+       TRUCKERSMP
+       https://truckersmp.com/        ← REMPLACER PAR LE LIEN DE LA VTC
+
+       EMAIL
+       contact@exemple.fr             ← REMPLACER
+
+       ---------------------------------------------------------
+       PROCHAINS CONVOIS
+       Modifie les titres, dates, trajets, heures et distances
+       directement dans la section "convois" plus bas.
+       ---------------------------------------------------------
+
+       GALERIE
+       Dépose tes photos dans le dossier "assets".
+       Exemple : assets/convoi-01.jpg
+       Puis indique le nom du fichier dans la section Galerie.
+       ========================================================= -->
+
   <header class="header">
-    <a class="brand" href="#accueil" aria-label="Accueil">
+    <a class="brand" href="#accueil">
       <img src="assets/logo.png" alt="Logo Les Alcooliques du Bitume">
     </a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+
     <nav class="nav">
       <a href="#accueil">Accueil</a>
       <a href="#vtc">La VTC</a>
-      <a href="#chauffeurs">Nos chauffeurs</a>
+      <a href="#equipe">Notre équipe</a>
       <a href="#convois">Convois</a>
       <a href="#galerie">Galerie</a>
       <a href="#recrutement">Recrutement</a>
       <a href="#contact">Contact</a>
     </nav>
+
     <a class="btn btn-discord" href="https://discord.gg/JSXcqKbQfv" target="_blank" rel="noopener">Discord</a>
   </header>
 
   <main>
+
     <section id="accueil" class="hero">
-      <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">VTC ETS2</p>
         <h1>Les <span>Alcooliques</span><br>du Bitume</h1>
-        <p class="hero-text">Plus qu'une VTC, une famille de passionnés !<br>
-          Convivialité, respect et bonne humeur sont les clés de notre route.</p>
+        <p class="hero-text">
+          Plus qu'une VTC, une famille de passionnés !<br>
+          Convivialité, respect et bonne humeur sont les clés de notre route.
+        </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#recrutement">Nous rejoindre</a>
           <a class="btn btn-outline" href="#vtc">En savoir plus →</a>
@@ -43,16 +76,23 @@
     <section class="values">
       <div><span>👥</span><h3>Convivialité</h3><p>Une ambiance détendue et des chauffeurs soudés.</p></div>
       <div><span>🛡️</span><h3>Respect</h3><p>Le respect de chacun est notre priorité.</p></div>
-      <div><span>🚛</span><h3>Passion</h3><p>Euro Truck Simulator 2 nous rassemble chaque jour.</p></div>
-      <div><span>🤝</span><h3>Entraide</h3><p>Toujours là pour s'entraider et progresser ensemble.</p></div>
-      <div><span>🏆</span><h3>Progression</h3><p>Des objectifs communs et des souvenirs inoubliables.</p></div>
+      <div><span>🚛</span><h3>Passion</h3><p>Euro Truck Simulator 2 nous rassemble.</p></div>
+      <div><span>🤝</span><h3>Entraide</h3><p>Toujours là pour s'entraider.</p></div>
+      <div><span>🏆</span><h3>Progression</h3><p>Des objectifs communs et de bons souvenirs.</p></div>
     </section>
 
-    <section id="vtc" class="split section">
+    <section id="vtc" class="section split">
       <div class="about">
         <p class="eyebrow">À PROPOS</p>
         <h2>De la <span>VTC</span></h2>
-        <p>Les Alcooliques du Bitume est une VTC française sur Euro Truck Simulator 2. Nous roulons ensemble, organisons des convois et partageons notre passion du camionnage virtuel dans la bonne humeur.</p>
+
+        <!-- ✏️ MODIFIER ICI LA PRÉSENTATION DE LA VTC -->
+        <p>
+          Les Alcooliques du Bitume est une VTC française sur Euro Truck Simulator 2.
+          Nous roulons ensemble, organisons des convois et partageons notre passion
+          du camionnage virtuel dans la bonne humeur.
+        </p>
+
         <ul>
           <li>VTC ouverte et conviviale</li>
           <li>Convois réguliers</li>
@@ -60,56 +100,129 @@
           <li>Actifs sur TruckersMP</li>
           <li>Discord obligatoire</li>
         </ul>
-        <a class="btn btn-outline" href="#recrutement">Découvrir la VTC →</a>
       </div>
+
       <div class="about-logo">
         <img src="assets/logo.png" alt="Logo de la VTC">
       </div>
     </section>
 
-    <section id="chauffeurs" class="section">
+    <!-- =====================================================
+         👑 ÉQUIPE — MODIFIER LES NOMS ICI
+         ===================================================== -->
+    <section id="equipe" class="section">
       <p class="eyebrow">L'ÉQUIPE</p>
-      <h2>Nos <span>chauffeurs</span></h2>
-      <div class="cards">
-        <article class="card">
-          <div class="avatar">🚛</div><h3>À compléter</h3><p>Direction / Fondateur</p>
-        </article>
-        <article class="card">
-          <div class="avatar">🚛</div><h3>À compléter</h3><p>Chauffeur</p>
-        </article>
-        <article class="card">
-          <div class="avatar">🚛</div><h3>À compléter</h3><p>Chauffeur</p>
-        </article>
+      <h2>Notre <span>équipe</span></h2>
+
+      <div class="team-group">
+        <h3 class="team-title">👑 Fondateurs</h3>
+        <div class="cards">
+          <article class="card"><div class="role-icon">👑</div><h3>Mat</h3><p>Fondateur</p></article>
+          <article class="card"><div class="role-icon">👑</div><h3>Nico</h3><p>Fondateur</p></article>
+          <article class="card"><div class="role-icon">👑</div><h3>Ninja</h3><p>Fondateur</p></article>
+        </div>
       </div>
-      <p class="hint">Les noms et rôles pourront être remplacés facilement ensuite.</p>
+
+      <div class="team-group">
+        <h3 class="team-title">🛡️ Modérateurs</h3>
+        <div class="cards">
+          <article class="card"><div class="role-icon">🛡️</div><h3>legameur28.0</h3><p>Modérateur</p></article>
+          <article class="card"><div class="role-icon">🛡️</div><h3>Papier Bulle</h3><p>Modérateur</p></article>
+          <article class="card"><div class="role-icon">🛡️</div><h3>Sorha</h3><p>Modérateur</p></article>
+        </div>
+      </div>
     </section>
 
+    <!-- =====================================================
+         📅 CONVOIS — MODIFIER LES INFOS ICI
+         ===================================================== -->
     <section id="convois" class="section dark-panel">
       <p class="eyebrow">ÉVÉNEMENTS</p>
       <h2>Prochains <span>convois</span></h2>
+
       <div class="convoy-list">
-        <article class="convoy"><div class="date"><strong>25</strong><small>MAI</small></div><div><h3>Convoi détente</h3><p>Lyon → Zurich · 20h00 · 420 km</p></div><a href="#contact">Détails</a></article>
-        <article class="convoy"><div class="date"><strong>01</strong><small>JUIN</small></div><div><h3>Convoi événement</h3><p>Paris → Bruxelles · 20h30 · 380 km</p></div><a href="#contact">Détails</a></article>
-        <article class="convoy"><div class="date"><strong>08</strong><small>JUIN</small></div><div><h3>Convoi officiel</h3><p>Bordeaux → Milan · 21h00 · 950 km</p></div><a href="#contact">Détails</a></article>
+
+        <!-- CONVOI 1 -->
+        <article class="convoy">
+          <div class="date"><strong>25</strong><small>MAI</small></div>
+          <div>
+            <h3>Convoi détente</h3>
+            <p>Lyon → Zurich · 20h00 · 420 km</p>
+          </div>
+          <a href="#contact">Détails</a>
+        </article>
+
+        <!-- CONVOI 2 -->
+        <article class="convoy">
+          <div class="date"><strong>01</strong><small>JUIN</small></div>
+          <div>
+            <h3>Convoi événement</h3>
+            <p>Paris → Bruxelles · 20h30 · 380 km</p>
+          </div>
+          <a href="#contact">Détails</a>
+        </article>
+
+        <!-- CONVOI 3 -->
+        <article class="convoy">
+          <div class="date"><strong>08</strong><small>JUIN</small></div>
+          <div>
+            <h3>Convoi officiel</h3>
+            <p>Bordeaux → Milan · 21h00 · 950 km</p>
+          </div>
+          <a href="#contact">Détails</a>
+        </article>
+
       </div>
     </section>
 
+    <!-- =====================================================
+         📸 GALERIE
+         Dépose tes photos dans "assets".
+         Exemple : convoi-01.jpg
+         ===================================================== -->
     <section id="galerie" class="section">
       <p class="eyebrow">NOS ROUTES</p>
       <h2>La <span>galerie</span></h2>
+
       <div class="gallery">
-        <div class="gallery-placeholder">Ajoute ici une photo de convoi</div>
-        <div class="gallery-placeholder">Ajoute ici une photo de convoi</div>
-        <div class="gallery-placeholder">Ajoute ici une photo de convoi</div>
-        <div class="gallery-placeholder">Ajoute ici une photo de convoi</div>
+        <div class="gallery-photo">
+          <img src="assets/convoi-01.jpg" alt="Photo de convoi 1">
+          <span>convoi-01.jpg</span>
+        </div>
+
+        <div class="gallery-photo">
+          <img src="assets/convoi-02.jpg" alt="Photo de convoi 2">
+          <span>convoi-02.jpg</span>
+        </div>
+
+        <div class="gallery-photo">
+          <img src="assets/convoi-03.jpg" alt="Photo de convoi 3">
+          <span>convoi-03.jpg</span>
+        </div>
+
+        <div class="gallery-photo">
+          <img src="assets/convoi-04.jpg" alt="Photo de convoi 4">
+          <span>convoi-04.jpg</span>
+        </div>
       </div>
+
+      <p class="hint">
+        Pour ajouter une photo : mets-la dans le dossier <strong>assets</strong>,
+        puis remplace le nom du fichier ci-dessus.
+      </p>
     </section>
 
     <section id="recrutement" class="section recruitment">
       <div>
         <p class="eyebrow">RECRUTEMENT</p>
         <h2>Envie de prendre <span>la route</span> avec nous ?</h2>
-        <p>Rejoins une VTC basée sur la passion d'ETS2, la convivialité et le plaisir de rouler ensemble.</p>
+
+        <!-- ✏️ MODIFIER ICI LES CONDITIONS DE RECRUTEMENT -->
+        <p>
+          Rejoins une VTC basée sur la passion d'ETS2, la convivialité
+          et le plaisir de rouler ensemble.
+        </p>
+
         <ul>
           <li>Être motivé et respectueux</li>
           <li>Aimer les convois en groupe</li>
@@ -117,34 +230,56 @@
           <li>Rejoindre notre Discord</li>
         </ul>
       </div>
+
       <div class="recruit-box">
         <h3>Prêt à rejoindre l'équipe ?</h3>
-        <a class="btn btn-primary" href="https://discord.gg/REMPLACE-MOI" target="_blank" rel="noopener">Rejoindre le Discord</a>
+        <a class="btn btn-primary" href="https://discord.gg/JSXcqKbQfv" target="_blank" rel="noopener">
+          Rejoindre le Discord
+        </a>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <p class="eyebrow">NOUS CONTACTER</p>
       <h2>Retrouve-nous <span>en ligne</span></h2>
+
       <div class="contact-grid">
-        <a class="contact-card" href="https://discord.gg/REMPLACE-MOI" target="_blank" rel="noopener"><strong>Discord</strong><span>Rejoindre notre serveur →</span></a>
-        <a class="contact-card" href="https://truckersmp.com/" target="_blank" rel="noopener"><strong>TruckersMP</strong><span>Notre profil VTC →</span></a>
-        <a class="contact-card" href="mailto:contact@exemple.fr"><strong>Email</strong><span>Nous écrire →</span></a>
+        <a class="contact-card" href="https://discord.gg/JSXcqKbQfv" target="_blank" rel="noopener">
+          <strong>Discord</strong>
+          <span>Rejoindre notre serveur →</span>
+        </a>
+
+        <!-- ✏️ REMPLACE CE LIEN PAR LE LIEN TRUCKERSMP DE LA VTC -->
+        <a class="contact-card" href="https://truckersmp.com/" target="_blank" rel="noopener">
+          <strong>TruckersMP</strong>
+          <span>Notre profil VTC →</span>
+        </a>
+
+        <!-- ✏️ REMPLACE L'ADRESSE EMAIL -->
+        <a class="contact-card" href="mailto:contact@exemple.fr">
+          <strong>Email</strong>
+          <span>Nous écrire →</span>
+        </a>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <img src="assets/logo.png" alt="" class="footer-logo">
+    <img src="assets/logo.png" alt="Logo" class="footer-logo">
     <p>© 2026 Les Alcooliques du Bitume — VTC ETS2</p>
-    <p class="small">Site créé pour la communauté • Tous droits réservés</p>
+    <p class="small">Site créé pour la communauté</p>
   </footer>
 
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
+
     toggle.addEventListener('click', () => nav.classList.toggle('open'));
-    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('open'));
+    });
   </script>
 </body>
 </html>
