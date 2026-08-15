@@ -81,3 +81,15 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
 .convoy{grid-template-columns:65px 1fr}.convoy>a{grid-column:2;justify-self:start}.date{padding-right:12px}
 .section{padding:70px 0}.section h2{font-size:42px}
 }
+
+.convoy-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 12px;
+}
+
+.convoy-details span {
+  color: #aaa;
+  font-size: 13px;
+}
