@@ -19,10 +19,10 @@ Change la date, le titre, le trajet, l'heure et la distance.
 ### 5. Photos
 Mets tes photos dans le dossier `assets`.
 Exemples :
-- convoi-01.jpg
-- convoi-02.jpg
-- convoi-03.jpg
-- convoi-04.jpg
+- convoi-01.png
+- convoi-02.png
+- convoi-03.png
+- convoi-04.png
 
 Puis utilise ces noms dans la section `GALERIE` de `index.html`.
 
