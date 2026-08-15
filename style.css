@@ -93,3 +93,28 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
   color: #aaa;
   font-size: 13px;
 }
+
+
+.convoy-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.convoy-buttons a {
+  border: 1px solid var(--orange);
+  padding: 8px 14px;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  color: var(--orange);
+  white-space: nowrap;
+}
+
+.convoy-buttons .truckbook-btn {
+  background: var(--orange);
+  color: #111;
+}
+
+.convoy-buttons a:hover {
+  transform: translateY(-2px);
+}
