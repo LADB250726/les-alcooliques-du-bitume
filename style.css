@@ -128,3 +128,37 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
 .about strong, .recruitment strong {
   color: #fff;
 }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.gallery-photo img {
+  cursor: pointer;
+}
