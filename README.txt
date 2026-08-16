@@ -1,32 +1,29 @@
 # Les Alcooliques du Bitume — VTC ETS2
 
-## Informations actuelles
+Version complète du site.
+
+Informations :
 - Création : 25 juillet 2026
-- Pays : France
-- Jeu : Euro Truck Simulator 2
-- Plateforme : PC
-- Ambiance : conviviale et détendue
+- France
+- Euro Truck Simulator 2
+- PC uniquement
+- Ambiance conviviale et détendue
 
-## Recrutement
+Recrutement :
 - 18 ans minimum
-- Discord obligatoire
-- Micro obligatoire
+- Discord et micro obligatoires
 - Aucun DLC obligatoire
-- TruckersMP non obligatoire, mais conseillé
-- Aucune participation obligatoire aux convois
-- Entretien vocal obligatoire avec un membre du Staff à l'arrivée sur Discord
-- Après validation de l'entretien : statut de Recrue pendant 1 mois
+- TruckersMP non obligatoire mais conseillé
+- Pas de participation obligatoire aux convois
+- Entretien vocal avec un membre du Staff à l'arrivée sur Discord
+- Après validation de l'entretien : statut Recrue pendant 1 mois
 
-## Modification facile
-Dans `index.html`, cherche les commentaires `MODIFIER ICI` pour trouver rapidement :
-- la présentation de la VTC
-- les noms du Staff
-- les informations du prochain convoi
-- les conditions de recrutement
+Liens :
+- Discord : https://discord.gg/JSXcqKbQfv
+- TruckersMP VTC : https://truckersmp.com/vtc/91658
+- Email : lesalcooliquesdubitume@gmail.com
+- TruckBook convoi : https://trucksbook.eu/convoy/26218
 
-Pour une nouvelle photo :
-1. ajoute l'image dans `assets/`
-2. ajoute/modifie une ligne `<img src="assets/nom-photo.png" ...>` dans la section Galerie
-3. fais `Commit changes` sur GitHub
+Photos : les fichiers sont dans assets/. Les noms de fichiers ne sont plus affichés sous les photos.
 
-Le site est publié par GitHub Pages et se met à jour automatiquement après les commits.
+Pour modifier le site : ouvre index.html sur GitHub, cherche les commentaires indiquant les sections à modifier, puis fais Commit changes.
