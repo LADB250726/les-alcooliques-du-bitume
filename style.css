@@ -82,6 +82,8 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
 .section{padding:70px 0}.section h2{font-size:42px}
 }
 
+
+/* Détails du convoi */
 .convoy-details {
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +95,6 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
   color: #aaa;
   font-size: 13px;
 }
-
 
 .convoy-buttons {
   display: flex;
@@ -117,4 +118,13 @@ h1{font-size:56px}.hero-text{font-size:16px}.hero-actions{flex-direction:column;
 
 .convoy-buttons a:hover {
   transform: translateY(-2px);
+}
+
+.recruitment h3 {
+  color: var(--orange);
+  margin-top: 28px;
+}
+
+.about strong, .recruitment strong {
+  color: #fff;
 }

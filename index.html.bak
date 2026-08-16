@@ -25,8 +25,8 @@
        contact@exemple.fr             ← REMPLACER
 
        ---------------------------------------------------------
-       PROCHAIN CONVOI
-       Modifie le titre, la date, le trajet, l'heure et les détails
+       PROCHAINS CONVOIS
+       Modifie les titres, dates, trajets, heures et distances
        directement dans la section "convois" plus bas.
        ---------------------------------------------------------
 
@@ -86,24 +86,19 @@
         <p class="eyebrow">À PROPOS</p>
         <h2>De la <span>VTC</span></h2>
 
-        <!-- ✏️ PRÉSENTATION DE LA VTC — MODIFIER ICI SI BESOIN -->
+        <!-- ✏️ MODIFIER ICI LA PRÉSENTATION DE LA VTC -->
         <p>
-          <strong>Les Alcooliques du Bitume</strong> est une VTC française créée le
-          <strong>25 juillet 2026</strong>, dédiée à <strong>Euro Truck Simulator 2 sur PC</strong>.
-        </p>
-        <p>
-          Notre objectif est avant tout de partager notre passion du camion dans une
-          ambiance <strong>conviviale et détendue</strong>, sans pression. Que tu sois un
-          chauffeur expérimenté ou que tu débutes, l'essentiel est de prendre la route
-          ensemble et de passer un bon moment.
+          Les Alcooliques du Bitume est une VTC française sur Euro Truck Simulator 2.
+          Nous roulons ensemble, organisons des convois et partageons notre passion
+          du camionnage virtuel dans la bonne humeur.
         </p>
 
         <ul>
-          <li>VTC française créée le 25 juillet 2026</li>
-          <li>Euro Truck Simulator 2 sur PC</li>
-          <li>Ambiance conviviale et détendue</li>
-          <li>Convois et événements entre passionnés</li>
-          <li>Une communauté sans pression</li>
+          <li>VTC ouverte et conviviale</li>
+          <li>Convois réguliers</li>
+          <li>Ambiance familiale</li>
+          <li>Actifs sur TruckersMP</li>
+          <li>Discord obligatoire</li>
         </ul>
       </div>
 
@@ -147,25 +142,34 @@
 
       <div class="convoy-list">
 
-        <!-- CONVOI ACTUEL — MODIFIER LES INFOS ICI POUR LES PROCHAINS CONVOIS -->
+        <!-- CONVOI 1 -->
         <article class="convoy">
-          <div class="date"><strong>19</strong><small>SEPT.</small></div>
+          <div class="date"><strong>25</strong><small>MAI</small></div>
           <div>
-            <h3>Premier Convoi Officiel inter-team</h3>
-            <p>Munich — KATHODE → Budapest — KAARFOR</p>
-            <div class="convoy-details">
-              <span>📅 Samedi 19 septembre 2026</span>
-              <span>🕣 RDV 20h30 · Départ 21h00</span>
-              <span>📏 1 206 km</span>
-              <span>🛣️ Autoroutes évitées</span>
-              <span>📦 Chargement au choix · 10 T</span>
-              <span>🌐 Simulation 2</span>
-            </div>
+            <h3>Convoi détente</h3>
+            <p>Lyon → Zurich · 20h00 · 420 km</p>
           </div>
-          <div class="convoy-buttons">
-            <a href="https://discord.gg/JSXcqKbQfv" target="_blank" rel="noopener">💬 Discord</a>
-            <a href="https://trucksbook.eu/convoy/26218" target="_blank" rel="noopener" class="truckbook-btn">📋 S'inscrire sur TruckBook</a>
+          <a href="#contact">Détails</a>
+        </article>
+
+        <!-- CONVOI 2 -->
+        <article class="convoy">
+          <div class="date"><strong>01</strong><small>JUIN</small></div>
+          <div>
+            <h3>Convoi événement</h3>
+            <p>Paris → Bruxelles · 20h30 · 380 km</p>
           </div>
+          <a href="#contact">Détails</a>
+        </article>
+
+        <!-- CONVOI 3 -->
+        <article class="convoy">
+          <div class="date"><strong>08</strong><small>JUIN</small></div>
+          <div>
+            <h3>Convoi officiel</h3>
+            <p>Bordeaux → Milan · 21h00 · 950 km</p>
+          </div>
+          <a href="#contact">Détails</a>
         </article>
 
       </div>
@@ -202,7 +206,10 @@
         </div>
       </div>
 
-
+      <p class="hint">
+        Pour ajouter une photo : mets-la dans le dossier <strong>assets</strong>,
+        puis remplace le nom du fichier ci-dessus.
+      </p>
     </section>
 
     <section id="recrutement" class="section recruitment">
@@ -210,34 +217,18 @@
         <p class="eyebrow">RECRUTEMENT</p>
         <h2>Envie de prendre <span>la route</span> avec nous ?</h2>
 
-        <!-- ✏️ CONDITIONS DE RECRUTEMENT — MODIFIER ICI SI BESOIN -->
+        <!-- ✏️ MODIFIER ICI LES CONDITIONS DE RECRUTEMENT -->
         <p>
-          Tu recherches une VTC française avec une ambiance <strong>conviviale et détendue</strong> ?
-          Les Alcooliques du Bitume t'accueillent sur ETS2 PC.
+          Rejoins une VTC basée sur la passion d'ETS2, la convivialité
+          et le plaisir de rouler ensemble.
         </p>
 
-        <h3>Conditions pour nous rejoindre</h3>
         <ul>
-          <li>Avoir <strong>18 ans minimum</strong></li>
-          <li>Posséder <strong>Discord</strong></li>
-          <li>Posséder un <strong>micro</strong></li>
-          <li>Jouer à <strong>Euro Truck Simulator 2 sur PC</strong></li>
-          <li><strong>Aucun DLC obligatoire</strong></li>
-          <li><strong>TruckersMP non obligatoire</strong>, mais conseillé</li>
-          <li><strong>Aucune participation obligatoire</strong> aux convois</li>
+          <li>Être motivé et respectueux</li>
+          <li>Aimer les convois en groupe</li>
+          <li>Posséder Euro Truck Simulator 2</li>
+          <li>Rejoindre notre Discord</li>
         </ul>
-
-        <h3>Entretien et période d'essai</h3>
-        <p>
-          À son arrivée sur notre Discord, chaque candidat doit passer
-          <strong>un entretien vocal avec un membre du Staff</strong>.
-          Si la candidature est validée à l'issue de cet entretien, le nouveau membre
-          intègre la VTC avec le <strong>statut de Recrue pendant 1 mois</strong>.
-        </p>
-        <p>
-          Cette période permet de découvrir la VTC, son fonctionnement et ses membres,
-          tout en permettant au Staff de s'assurer que l'intégration se passe bien.
-        </p>
       </div>
 
       <div class="recruit-box">
