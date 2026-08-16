@@ -287,19 +287,53 @@
     });
   </script>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="lightbox-close">&times;</span>
-  <img id="lightbox-img" src="" alt="Photo agrandie">
+<div id="lightbox" onclick="closeLightbox()" style="
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.95);
+  z-index:999999;
+  align-items:center;
+  justify-content:center;
+">
+  <span onclick="closeLightbox()" style="
+    position:absolute;
+    top:15px;
+    right:30px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+    z-index:1000000;
+  ">&times;</span>
+
+  <img id="lightbox-img" src="" alt="Photo agrandie" onclick="event.stopPropagation()" style="
+    max-width:90vw;
+    max-height:90vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+  ">
 </div>
 
 <script>
 function openLightbox(src) {
-  document.getElementById("lightbox-img").src = src;
-  document.getElementById("lightbox").classList.add("active");
+  const lightbox = document.getElementById("lightbox");
+  const image = document.getElementById("lightbox-img");
+
+  image.src = src;
+
+  lightbox.style.display = "flex";
+  document.body.style.overflow = "hidden";
 }
 
 function closeLightbox() {
-  document.getElementById("lightbox").classList.remove("active");
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.style.display = "none";
+  document.body.style.overflow = "";
 }
 </script>
 
