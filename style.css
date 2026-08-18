@@ -77,11 +77,17 @@ h1 span,h2 span{color:var(--orange)}
 .contact-card strong{color:var(--orange);font:600 24px Oswald;text-transform:uppercase}.contact-card span{color:#aaa}
 .footer{text-align:center;padding:45px 20px;border-top:1px solid #2a1a0e;color:#aaa}
 .footer-logo{width:90px;height:90px;object-fit:contain}.footer p{margin:8px 0}.footer .small{font-size:12px;color:#666}
-.hero{min-height:700px;padding:130px 7% 90px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.70)),url('assets/logo.png') center 58%/380px 380px no-repeat,#050505}
+@media(max-width:900px)
 .header{height:72px;justify-content:space-between}.brand img{width:70px;height:70px;margin-top:20px}
 .menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#080808;padding:20px;border-bottom:1px solid #333}
 .nav.open{display:flex}.btn-discord{display:none}
-.hero{min-height:700px;padding:130px 7% 90px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.70)),url('assets/logo.png') center 58%/380px 380px no-repeat,#050505}
+.hero{
+  min-height:700px;
+  padding:130px 7% 90px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.50)),
+    url('assets/banniere.png') center center/cover no-repeat;
+}
 .values{grid-template-columns:1fr 1fr}.values>div:nth-child(odd){border-right:1px solid #3b2514}.values>div:nth-child(even){border-right:0}
 .split,.recruitment{grid-template-columns:1fr;gap:35px}.cards,.gallery,.contact-grid{grid-template-columns:1fr 1fr}
 }
