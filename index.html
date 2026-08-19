@@ -1,47 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Les Alcooliques du Bitume — VTC ETS2">
+
+  <meta
+    name="description"
+    content="Les Alcooliques du Bitume — VTC ETS2"
+  >
+
   <title>Les Alcooliques du Bitume — VTC ETS2</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const elements = document.querySelectorAll(
-    ".section, .values, .card, .why-card, .convoy, .gallery-photo, .contact-card, .recruit-box"
-  );
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("scroll-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
-
-  elements.forEach((element) => {
-    element.classList.add("scroll-hidden");
-    observer.observe(element);
-  });
-
-});
-</script>
 <body>
 
   <!-- =========================================================
        🟠 ZONE FACILE À MODIFIER
        =========================================================
-       Tu peux modifier ici les informations principales.
-       Le site se met à jour après "Commit changes" sur GitHub.
 
        DISCORD
        https://discord.gg/JSXcqKbQfv
@@ -49,19 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
        TRUCKERSMP
        https://truckersmp.com/vtc/91658
 
-       EMAIL
-       lesalcooliquesdubitume@gmail.com
-
        ---------------------------------------------------------
-       PROCHAIN CONVOI
-       Modifie le titre, la date, le trajet, l'heure et les détails
-       directement dans la section "convois" plus bas.
+       FORMULAIRE DE CONTACT
        ---------------------------------------------------------
 
-       GALERIE
-       Dépose tes photos dans le dossier "assets".
-       Exemple : assets/convoi-01.png
-       Puis indique le nom du fichier dans la section Galerie.
+       Le formulaire situé en bas du site envoie les messages
+       directement vers Discord grâce à un webhook.
+
+       IMPORTANT :
+       Remplace TON_WEBHOOK_DISCORD_ICI dans le script situé
+       tout en bas de cette page par ton webhook Discord.
+
        ========================================================= -->
 
 
@@ -72,12 +48,22 @@ document.addEventListener("DOMContentLoaded", () => {
   <header class="header">
 
     <a class="brand" href="#accueil">
-      <img src="assets/logo.png" alt="Logo Les Alcooliques du Bitume">
+      <img
+        src="assets/logo.png"
+        alt="Logo Les Alcooliques du Bitume"
+      >
     </a>
 
-    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <button
+      class="menu-toggle"
+      aria-label="Menu"
+      type="button"
+    >
+      ☰
+    </button>
 
     <nav class="nav">
+
       <a href="#accueil">Accueil</a>
       <a href="#vtc">La VTC</a>
       <a href="#equipe">Notre équipe</a>
@@ -86,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="#galerie">Galerie</a>
       <a href="#recrutement">Recrutement</a>
       <a href="#contact">Contact</a>
+
     </nav>
 
     <a
@@ -109,37 +96,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <section id="accueil" class="hero">
 
-  <!-- BANNIÈRE ANIMÉE -->
-  <div class="hero-background"></div>
-  <div class="hero-overlay"></div>
+      <div class="hero-background"></div>
 
-  <div class="hero-content">
+      <div class="hero-overlay"></div>
 
-    <p class="eyebrow">VTC ETS2</p>
+      <div class="hero-content">
 
-    <h1>
-      Les <span>Alcooliques</span><br>
-      du Bitume
-    </h1>
+        <p class="eyebrow">
+          VTC ETS2
+        </p>
 
-    <p class="hero-text">
-      Plus qu'une VTC, une famille de passionnés !<br>
-      Convivialité, respect et bonne humeur sont les clés de notre route.
-    </p>
+        <h1>
+          Les <span>Alcooliques</span><br>
+          du Bitume
+        </h1>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#recrutement">
-        Nous rejoindre
-      </a>
+        <p class="hero-text">
+          Plus qu'une VTC, une famille de passionnés !<br>
+          Convivialité, respect et bonne humeur sont les clés de notre route.
+        </p>
 
-      <a class="btn btn-outline" href="#vtc">
-        En savoir plus →
-      </a>
-    </div>
+        <div class="hero-actions">
 
-  </div>
+          <a
+            class="btn btn-primary"
+            href="#recrutement"
+          >
+            Nous rejoindre
+          </a>
 
-</section>
+          <a
+            class="btn btn-outline"
+            href="#vtc"
+          >
+            En savoir plus →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
     <!-- =========================================================
@@ -149,33 +146,77 @@ document.addEventListener("DOMContentLoaded", () => {
     <section class="values">
 
       <div>
+
         <span>👥</span>
-        <h3>Convivialité</h3>
-        <p>Une ambiance détendue et des chauffeurs soudés.</p>
+
+        <h3>
+          Convivialité
+        </h3>
+
+        <p>
+          Une ambiance détendue et des chauffeurs soudés.
+        </p>
+
       </div>
 
+
       <div>
+
         <span>🛡️</span>
-        <h3>Respect</h3>
-        <p>Le respect de chacun est notre priorité.</p>
+
+        <h3>
+          Respect
+        </h3>
+
+        <p>
+          Le respect de chacun est notre priorité.
+        </p>
+
       </div>
 
+
       <div>
+
         <span>🚛</span>
-        <h3>Passion</h3>
-        <p>Euro Truck Simulator 2 nous rassemble.</p>
+
+        <h3>
+          Passion
+        </h3>
+
+        <p>
+          Euro Truck Simulator 2 nous rassemble.
+        </p>
+
       </div>
 
+
       <div>
+
         <span>🤝</span>
-        <h3>Entraide</h3>
-        <p>Toujours là pour s'entraider.</p>
+
+        <h3>
+          Entraide
+        </h3>
+
+        <p>
+          Toujours là pour s'entraider.
+        </p>
+
       </div>
 
+
       <div>
+
         <span>🏆</span>
-        <h3>Progression</h3>
-        <p>Des objectifs communs et de bons souvenirs.</p>
+
+        <h3>
+          Progression
+        </h3>
+
+        <p>
+          Des objectifs communs et de bons souvenirs.
+        </p>
+
       </div>
 
     </section>
@@ -185,11 +226,16 @@ document.addEventListener("DOMContentLoaded", () => {
          🚛 LA VTC
          ========================================================= -->
 
-    <section id="vtc" class="section split">
+    <section
+      id="vtc"
+      class="section split"
+    >
 
       <div class="about">
 
-        <p class="eyebrow">À PROPOS</p>
+        <p class="eyebrow">
+          À PROPOS
+        </p>
 
         <h2>
           De la <span>VTC</span>
@@ -209,17 +255,39 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
 
         <ul>
-          <li>VTC française créée le 25 juillet 2026</li>
-          <li>Euro Truck Simulator 2 sur PC</li>
-          <li>Ambiance conviviale et détendue</li>
-          <li>Convois et événements entre passionnés</li>
-          <li>Une communauté sans pression</li>
+
+          <li>
+            VTC française créée le 25 juillet 2026
+          </li>
+
+          <li>
+            Euro Truck Simulator 2 sur PC
+          </li>
+
+          <li>
+            Ambiance conviviale et détendue
+          </li>
+
+          <li>
+            Convois et événements entre passionnés
+          </li>
+
+          <li>
+            Une communauté sans pression
+          </li>
+
         </ul>
 
       </div>
 
+
       <div class="about-logo">
-        <img src="assets/logo.png" alt="Logo de la VTC">
+
+        <img
+          src="assets/logo.png"
+          alt="Logo de la VTC"
+        >
+
       </div>
 
     </section>
@@ -229,9 +297,14 @@ document.addEventListener("DOMContentLoaded", () => {
          👑 ÉQUIPE
          ========================================================= -->
 
-    <section id="equipe" class="section">
+    <section
+      id="equipe"
+      class="section"
+    >
 
-      <p class="eyebrow">L'ÉQUIPE</p>
+      <p class="eyebrow">
+        L'ÉQUIPE
+      </p>
 
       <h2>
         Notre <span>équipe</span>
@@ -249,21 +322,53 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cards">
 
           <article class="card">
-            <div class="role-icon">👑</div>
-            <h3>Mat</h3>
-            <p>Fondateur</p>
+
+            <div class="role-icon">
+              👑
+            </div>
+
+            <h3>
+              Mat
+            </h3>
+
+            <p>
+              Fondateur
+            </p>
+
           </article>
 
-          <article class="card">
-            <div class="role-icon">👑</div>
-            <h3>Nico</h3>
-            <p>Fondateur</p>
-          </article>
 
           <article class="card">
-            <div class="role-icon">👑</div>
-            <h3>Ninja</h3>
-            <p>Fondateur</p>
+
+            <div class="role-icon">
+              👑
+            </div>
+
+            <h3>
+              Nico
+            </h3>
+
+            <p>
+              Fondateur
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="role-icon">
+              👑
+            </div>
+
+            <h3>
+              Ninja
+            </h3>
+
+            <p>
+              Fondateur
+            </p>
+
           </article>
 
         </div>
@@ -282,15 +387,36 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cards">
 
           <article class="card">
-            <div class="role-icon">🛡️</div>
-            <h3>legameur28.0</h3>
-            <p>Modérateur</p>
+
+            <div class="role-icon">
+              🛡️
+            </div>
+
+            <h3>
+              legameur28.0
+            </h3>
+
+            <p>
+              Modérateur
+            </p>
+
           </article>
 
+
           <article class="card">
-            <div class="role-icon">🛡️</div>
-            <h3>Sorha</h3>
-            <p>Modérateur</p>
+
+            <div class="role-icon">
+              🛡️
+            </div>
+
+            <h3>
+              Sorha
+            </h3>
+
+            <p>
+              Modérateur
+            </p>
+
           </article>
 
         </div>
@@ -304,7 +430,10 @@ document.addEventListener("DOMContentLoaded", () => {
          🟠 POURQUOI NOUS REJOINDRE ?
          ========================================================= -->
 
-    <section id="pourquoi" class="section why-us">
+    <section
+      id="pourquoi"
+      class="section why-us"
+    >
 
       <p class="eyebrow">
         POURQUOI NOUS ?
@@ -321,9 +450,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       <div class="why-grid">
-
-
-        <!-- AVANTAGE 1 -->
 
         <article class="why-card">
 
@@ -343,8 +469,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </article>
 
 
-        <!-- AVANTAGE 2 -->
-
         <article class="why-card">
 
           <div class="why-icon">
@@ -362,8 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </article>
 
-
-        <!-- AVANTAGE 3 -->
 
         <article class="why-card">
 
@@ -383,8 +505,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </article>
 
-
-        <!-- AVANTAGE 4 -->
 
         <article class="why-card">
 
@@ -406,8 +526,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
 
-      <!-- PHRASE SIGNATURE -->
-
       <div class="why-quote">
 
         <span>«</span>
@@ -426,7 +544,10 @@ document.addEventListener("DOMContentLoaded", () => {
          📅 CONVOIS
          ========================================================= -->
 
-    <section id="convois" class="section dark-panel">
+    <section
+      id="convois"
+      class="section dark-panel"
+    >
 
       <p class="eyebrow">
         ÉVÉNEMENTS
@@ -439,14 +560,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div class="convoy-list">
 
-
-        <!-- CONVOI ACTUEL -->
-
         <article class="convoy">
 
           <div class="date">
-            <strong>19</strong>
-            <small>SEPT.</small>
+
+            <strong>
+              19
+            </strong>
+
+            <small>
+              SEPT.
+            </small>
+
           </div>
 
 
@@ -524,7 +649,10 @@ document.addEventListener("DOMContentLoaded", () => {
          📸 GALERIE
          ========================================================= -->
 
-    <section id="galerie" class="section">
+    <section
+      id="galerie"
+      class="section"
+    >
 
       <p class="eyebrow">
         NOS ROUTES
@@ -538,35 +666,46 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="gallery">
 
         <div class="gallery-photo">
+
           <img
             src="assets/convoi-01.png"
             alt="Photo de convoi 1"
             onclick="openLightbox(this.src)"
           >
+
         </div>
 
+
         <div class="gallery-photo">
+
           <img
             src="assets/convoi-02.png"
             alt="Photo de convoi 2"
             onclick="openLightbox(this.src)"
           >
+
         </div>
 
+
         <div class="gallery-photo">
+
           <img
             src="assets/convoi-03.png"
             alt="Photo de convoi 3"
             onclick="openLightbox(this.src)"
           >
+
         </div>
 
+
         <div class="gallery-photo">
+
           <img
             src="assets/convoi-04.png"
             alt="Photo de convoi 4"
             onclick="openLightbox(this.src)"
           >
+
         </div>
 
       </div>
@@ -578,7 +717,10 @@ document.addEventListener("DOMContentLoaded", () => {
          📝 RECRUTEMENT
          ========================================================= -->
 
-    <section id="recrutement" class="section recruitment">
+    <section
+      id="recrutement"
+      class="section recruitment"
+    >
 
       <div>
 
@@ -680,7 +822,10 @@ document.addEventListener("DOMContentLoaded", () => {
          📞 CONTACT
          ========================================================= -->
 
-    <section id="contact" class="section contact">
+    <section
+      id="contact"
+      class="section contact"
+    >
 
       <p class="eyebrow">
         NOUS CONTACTER
@@ -690,6 +835,8 @@ document.addEventListener("DOMContentLoaded", () => {
         Retrouve-nous <span>en ligne</span>
       </h2>
 
+
+      <!-- LIENS -->
 
       <div class="contact-grid">
 
@@ -733,23 +880,188 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </a>
 
+      </div>
 
-        <!-- EMAIL -->
 
-        <a
-          class="contact-card"
-          href="mailto:lesalcooliquesdubitume@gmail.com"
+      <!-- =====================================================
+           📨 FORMULAIRE DE CONTACT
+           ===================================================== -->
+
+      <div class="contact-form-wrapper">
+
+        <div class="contact-form-header">
+
+          <p class="eyebrow">
+            FORMULAIRE
+          </p>
+
+          <h3>
+            Nous <span>écrire</span>
+          </h3>
+
+          <p>
+            Une question, une demande ou une candidature ?
+            Remplis simplement le formulaire ci-dessous.
+            Ton message sera transmis directement à notre équipe
+            sur Discord.
+          </p>
+
+        </div>
+
+
+        <form
+          id="discord-contact-form"
+          class="contact-form"
         >
 
-          <strong>
-            Email
-          </strong>
+          <!-- NOM -->
 
-          <span>
-            Nous écrire →
-          </span>
+          <div class="form-group">
 
-        </a>
+            <label for="contact-name">
+              Nom / Pseudo
+            </label>
+
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              placeholder="Ton pseudo"
+              maxlength="100"
+              required
+            >
+
+          </div>
+
+
+          <!-- DISCORD -->
+
+          <div class="form-group">
+
+            <label for="contact-discord">
+              Pseudo Discord
+            </label>
+
+            <input
+              type="text"
+              id="contact-discord"
+              name="discord"
+              placeholder="exemple : Nicolas"
+              maxlength="100"
+              required
+            >
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="form-group">
+
+            <label for="contact-email">
+              Adresse email
+            </label>
+
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              placeholder="tonadresse@email.com"
+              maxlength="150"
+              required
+            >
+
+          </div>
+
+
+          <!-- SUJET -->
+
+          <div class="form-group">
+
+            <label for="contact-subject">
+              Sujet
+            </label>
+
+            <select
+              id="contact-subject"
+              name="subject"
+              required
+            >
+
+              <option value="">
+                Sélectionne un sujet
+              </option>
+
+              <option value="Candidature">
+                Candidature
+              </option>
+
+              <option value="Question">
+                Question
+              </option>
+
+              <option value="Partenariat">
+                Partenariat
+              </option>
+
+              <option value="Convoi">
+                Convoi
+              </option>
+
+              <option value="Autre">
+                Autre
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- MESSAGE -->
+
+          <div class="form-group form-full">
+
+            <label for="contact-message">
+              Message
+            </label>
+
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="7"
+              placeholder="Écris ton message ici..."
+              maxlength="2000"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- BOUTON -->
+
+          <div class="form-submit form-full">
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="contact-submit"
+            >
+              📨 Envoyer le message
+            </button>
+
+          </div>
+
+
+          <!-- MESSAGE DE RETOUR -->
+
+          <div
+            id="contact-status"
+            class="contact-status form-full"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+        </form>
 
       </div>
 
@@ -791,13 +1103,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('.nav');
 
     toggle.addEventListener('click', () => {
+
       nav.classList.toggle('open');
+
     });
+
 
     document.querySelectorAll('.nav a').forEach(link => {
 
       link.addEventListener('click', () => {
+
         nav.classList.remove('open');
+
       });
 
     });
@@ -869,6 +1186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image.src = src;
 
       lightbox.style.display = "flex";
+
       document.body.style.overflow = "hidden";
 
     }
@@ -879,6 +1197,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const lightbox = document.getElementById("lightbox");
 
       lightbox.style.display = "none";
+
       document.body.style.overflow = "";
 
     }
@@ -886,5 +1205,270 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 
 
+  <!-- =========================================================
+       ✨ ANIMATIONS AU DÉFILEMENT
+       ========================================================= -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const elements = document.querySelectorAll(
+        ".section, .values, .card, .why-card, .convoy, .gallery-photo, .contact-card, .recruit-box, .contact-form-wrapper"
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("scroll-visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+
+      elements.forEach((element) => {
+
+        element.classList.add("scroll-hidden");
+
+        observer.observe(element);
+
+      });
+
+    });
+
+  </script>
+
+
+  <!-- =========================================================
+       📩 FORMULAIRE → DISCORD
+       ========================================================= -->
+
+  <script>
+
+    const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1539775180975382632/nGR4SvZxpSOxNR8cD82seWPOMkRCrW5eLDNvB29s5HJ955y2k54dLPZV0hnRjNVv1S2H";
+
+
+    const contactForm = document.getElementById(
+      "discord-contact-form"
+    );
+
+    const contactStatus = document.getElementById(
+      "contact-status"
+    );
+
+    const contactSubmit = document.getElementById(
+      "contact-submit"
+    );
+
+
+    contactForm.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+
+      /* Vérification */
+
+      const name = document
+        .getElementById("contact-name")
+        .value
+        .trim();
+
+      const discord = document
+        .getElementById("contact-discord")
+        .value
+        .trim();
+
+      const email = document
+        .getElementById("contact-email")
+        .value
+        .trim();
+
+      const subject = document
+        .getElementById("contact-subject")
+        .value
+        .trim();
+
+      const message = document
+        .getElementById("contact-message")
+        .value
+        .trim();
+
+
+      if (
+        !name ||
+        !discord ||
+        !email ||
+        !subject ||
+        !message
+      ) {
+
+        contactStatus.textContent =
+          "⚠️ Merci de remplir tous les champs.";
+
+        contactStatus.className =
+          "contact-status error";
+
+        return;
+
+      }
+
+
+      /* Désactivation du bouton */
+
+      contactSubmit.disabled = true;
+
+      contactSubmit.textContent =
+        "⏳ Envoi en cours...";
+
+
+      contactStatus.textContent = "";
+
+
+      /* Création du message Discord */
+
+      const discordMessage = {
+
+        username: "Formulaire VTC",
+
+        embeds: [
+
+          {
+
+            title: "📩 Nouveau message depuis le site",
+
+            color: 15762176,
+
+            fields: [
+
+              {
+                name: "👤 Nom / Pseudo",
+                value: name,
+                inline: true
+              },
+
+              {
+                name: "💬 Discord",
+                value: discord,
+                inline: true
+              },
+
+              {
+                name: "📧 Email",
+                value: email,
+                inline: false
+              },
+
+              {
+                name: "📌 Sujet",
+                value: subject,
+                inline: false
+              },
+
+              {
+                name: "📝 Message",
+                value: message,
+                inline: false
+              }
+
+            ],
+
+            footer: {
+
+              text:
+                "Les Alcooliques du Bitume — Formulaire de contact"
+
+            },
+
+            timestamp:
+              new Date().toISOString()
+
+          }
+
+        ]
+
+      };
+
+
+      try {
+
+        const response = await fetch(
+          DISCORD_WEBHOOK_URL,
+          {
+
+            method: "POST",
+
+            headers: {
+
+              "Content-Type":
+                "application/json"
+
+            },
+
+            body:
+              JSON.stringify(discordMessage)
+
+          }
+        );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Erreur lors de l'envoi vers Discord."
+          );
+
+        }
+
+
+        /* Succès */
+
+        contactStatus.textContent =
+          "✅ Ton message a bien été envoyé ! Notre équipe te répondra sur Discord.";
+
+        contactStatus.className =
+          "contact-status success";
+
+
+        contactForm.reset();
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        contactStatus.textContent =
+          "❌ Une erreur est survenue. Vérifie ta connexion ou contacte-nous directement sur Discord.";
+
+        contactStatus.className =
+          "contact-status error";
+
+      }
+
+
+      contactSubmit.disabled = false;
+
+      contactSubmit.textContent =
+        "📨 Envoyer le message";
+
+    });
+
+  </script>
+
+
 </body>
+
 </html>
