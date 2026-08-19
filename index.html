@@ -13,6 +13,234 @@
   <title>Les Alcooliques du Bitume — VTC ETS2</title>
 
   <link rel="stylesheet" href="style.css">
+
+<style>
+/* =========================================================
+   FORMULAIRE CONTACT - STYLE INTÉGRÉ
+   ========================================================= */
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 1050px;
+  margin: 50px auto 0;
+  padding: 42px;
+  background: #101010;
+  border: 1px solid #303030;
+  border-top: 3px solid #f07d00;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.contact-form-header {
+  margin-bottom: 32px;
+}
+
+.contact-form-header .eyebrow {
+  color: #f07d00;
+  margin-bottom: 8px;
+}
+
+.contact-form-header h3 {
+  font-family: Oswald, sans-serif;
+  font-size: 34px;
+  color: #f3f3f3;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.contact-form-header h3 span {
+  color: #f07d00;
+}
+
+.contact-form-header p {
+  max-width: 800px;
+  color: #aaa;
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-form {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 22px !important;
+}
+
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 9px !important;
+  width: 100% !important;
+}
+
+.form-full {
+  grid-column: 1 / -1 !important;
+}
+
+.form-group label {
+  display: block !important;
+  font-family: Oswald, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  color: #f3f3f3 !important;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+
+  padding: 15px 16px !important;
+
+  background: #181818 !important;
+  color: #f3f3f3 !important;
+
+  border: 1px solid #3a3a3a !important;
+  border-radius: 3px !important;
+
+  outline: none !important;
+
+  font-family: Roboto, Arial, sans-serif !important;
+  font-size: 16px !important;
+
+  transition: .2s ease !important;
+}
+
+.form-group input {
+  height: 54px !important;
+}
+
+.form-group select {
+  height: 54px !important;
+  cursor: pointer !important;
+}
+
+.form-group textarea {
+  min-height: 200px !important;
+  resize: vertical !important;
+  line-height: 1.5 !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #707070 !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #f07d00 !important;
+  background: #1d1d1d !important;
+
+  box-shadow:
+    0 0 0 2px rgba(240,125,0,.12) !important;
+}
+
+.form-submit {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+
+.form-submit button {
+  width: 100% !important;
+  height: 58px !important;
+
+  background: #f07d00 !important;
+  color: #111 !important;
+
+  border: none !important;
+
+  font-family: Oswald, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  cursor: pointer !important;
+
+  transition: .2s ease !important;
+}
+
+.form-submit button:hover {
+  background: #ff9a1f !important;
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 10px 30px rgba(240,125,0,.25) !important;
+}
+
+.contact-status {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  min-height: 20px !important;
+  margin-top: 2px !important;
+}
+
+.contact-status.success {
+  padding: 14px 16px !important;
+  color: #83e7a8 !important;
+  background: rgba(20,160,80,.08) !important;
+  border: 1px solid #238b54 !important;
+}
+
+.contact-status.error {
+  padding: 14px 16px !important;
+  color: #ff9090 !important;
+  background: rgba(200,40,40,.08) !important;
+  border: 1px solid #a84040 !important;
+}
+
+
+/* TABLETTE */
+
+@media (max-width: 900px) {
+
+  .contact-form-wrapper {
+    padding: 30px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-full,
+  .form-submit,
+  .contact-status {
+    grid-column: auto !important;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+
+  .contact-form-wrapper {
+    padding: 24px 18px;
+    margin-top: 35px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    gap: 18px !important;
+  }
+
+}
+</style>
+
+
+
+
+
+
+
+  
 </head>
 
 <body>
