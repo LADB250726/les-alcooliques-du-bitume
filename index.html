@@ -7,6 +7,42 @@
   <title>Les Alcooliques du Bitume — VTC ETS2</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  /* =========================================================
+     ✨ ANIMATION AU DÉFILEMENT
+     ========================================================= */
+
+  const scrollElements = document.querySelectorAll(
+    '.section, .values, .card, .why-card, .why-quote, .convoy'
+  );
+
+  scrollElements.forEach(element => {
+    element.classList.add('scroll-animate');
+  });
+
+  const scrollObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  scrollElements.forEach(element => {
+    scrollObserver.observe(element);
+  });
+</script>
 <body>
 
   <!-- =========================================================
