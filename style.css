@@ -27,9 +27,9 @@ a {
   text-decoration: none;
 }
 
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 .header {
   position: fixed;
@@ -116,11 +116,12 @@ a {
   color: white;
   border: 0;
   font-size: 28px;
+  cursor: pointer;
 }
 
-/* =========================
+/* =========================================================
    ACCUEIL / BANNIÈRE
-   ========================= */
+   ========================================================= */
 
 .hero {
   min-height: 760px;
@@ -129,28 +130,96 @@ a {
   align-items: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+/* Image de fond animée */
+.hero-background {
+  position: absolute;
+  inset: -5%;
+  z-index: -3;
+
+  background-image: url("assets/banniere.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: scale(1.05);
+
+  animation:
+    bannerZoom 12s ease-in-out infinite alternate,
+    bannerMove 18s ease-in-out infinite alternate;
+}
+
+/* Assombrissement */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 
   background:
     linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.82),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url('assets/banniere.png') center center / cover no-repeat;
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.62) 45%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+
+  pointer-events: none;
 }
 
-.hero:after {
+/* Animation zoom */
+@keyframes bannerZoom {
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+/* Animation déplacement horizontal */
+@keyframes bannerMove {
+  0% {
+    background-position: 48% center;
+  }
+
+  100% {
+    background-position: 55% center;
+  }
+}
+
+/* Dégradé inférieur */
+.hero::after {
   content: "";
   position: absolute;
   inset: auto 0 0;
   height: 120px;
   background: linear-gradient(transparent, var(--black));
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 760px;
+
+  animation: heroContentIn 1s ease-out;
+}
+
+/* Apparition du contenu */
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .eyebrow {
@@ -194,9 +263,9 @@ h2 span {
   margin-top: 28px;
 }
 
-/* =========================
+/* =========================================================
    VALEURS
-   ========================= */
+   ========================================================= */
 
 .values {
   position: relative;
@@ -217,7 +286,7 @@ h2 span {
 }
 
 .values > div:last-child {
-  border: 0;
+  border-right: 0;
 }
 
 .values span {
@@ -236,9 +305,9 @@ h2 span {
   margin: 0;
 }
 
-/* =========================
+/* =========================================================
    SECTIONS
-   ========================= */
+   ========================================================= */
 
 .section {
   width: 90%;
@@ -259,9 +328,9 @@ h2 span {
   align-items: center;
 }
 
-/* =========================
+/* =========================================================
    À PROPOS
-   ========================= */
+   ========================================================= */
 
 .about p:not(.eyebrow) {
   color: #c8c8c8;
@@ -279,8 +348,8 @@ h2 span {
   margin: 12px 0;
 }
 
-.about li:before,
-.recruitment li:before {
+.about li::before,
+.recruitment li::before {
   content: "✓";
   color: var(--orange);
   font-weight: bold;
@@ -301,9 +370,9 @@ h2 span {
   filter: drop-shadow(0 20px 30px #000);
 }
 
-/* =========================
+/* =========================================================
    ÉQUIPE
-   ========================= */
+   ========================================================= */
 
 .team-group {
   margin-top: 40px;
@@ -355,9 +424,92 @@ h2 span {
   color: var(--muted);
 }
 
-/* =========================
+/* =========================================================
+   POURQUOI NOUS REJOINDRE
+   ========================================================= */
+
+.why-us {
+  position: relative;
+}
+
+.why-intro {
+  max-width: 760px;
+  color: #c8c8c8;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.why-intro strong {
+  color: #fff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: var(--panel);
+  border: 1px solid #2b2b2b;
+  padding: 30px 24px;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--orange);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  border: 2px solid var(--orange);
+  font-size: 30px;
+}
+
+.why-card h3 {
+  color: var(--orange);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.why-quote {
+  margin-top: 45px;
+  padding: 30px;
+  text-align: center;
+  background: #0c0c0c;
+  border-left: 3px solid var(--orange);
+  border-right: 3px solid var(--orange);
+  color: #ddd;
+  font-family: Oswald, sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.why-quote span {
+  color: var(--orange);
+  font-size: 35px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* =========================================================
    CONVOIS
-   ========================= */
+   ========================================================= */
 
 .dark-panel {
   max-width: none;
@@ -434,6 +586,7 @@ h2 span {
   text-transform: uppercase;
   color: var(--orange);
   white-space: nowrap;
+  transition: 0.2s;
 }
 
 .convoy-buttons .truckbook-btn {
@@ -445,9 +598,9 @@ h2 span {
   transform: translateY(-2px);
 }
 
-/* =========================
+/* =========================================================
    GALERIE
-   ========================= */
+   ========================================================= */
 
 .gallery {
   display: grid;
@@ -471,11 +624,16 @@ h2 span {
   object-fit: cover;
   display: block;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* =========================
+.gallery-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
    RECRUTEMENT
-   ========================= */
+   ========================================================= */
 
 .recruitment {
   display: grid;
@@ -500,9 +658,9 @@ h2 span {
   font-size: 28px;
 }
 
-/* =========================
+/* =========================================================
    CONTACT
-   ========================= */
+   ========================================================= */
 
 .contact-grid {
   display: grid;
@@ -535,9 +693,9 @@ h2 span {
   color: #aaa;
 }
 
-/* =========================
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 .footer {
   text-align: center;
@@ -561,9 +719,9 @@ h2 span {
   color: #666;
 }
 
-/* =========================
+/* =========================================================
    LIGHTBOX
-   ========================= */
+   ========================================================= */
 
 #lightbox {
   display: none;
@@ -603,9 +761,9 @@ h2 span {
   cursor: pointer !important;
 }
 
-/* =========================
-   TABLETTE / MOBILE
-   ========================= */
+/* =========================================================
+   TABLETTE
+   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -647,13 +805,11 @@ h2 span {
   .hero {
     min-height: 700px;
     padding: 130px 7% 90px;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.78),
-        rgba(0, 0, 0, 0.50)
-      ),
-      url('assets/banniere.png') center center / cover no-repeat;
+  }
+
+  .hero-background {
+    inset: -5%;
+    animation: bannerZoomMobile 12s ease-in-out infinite alternate;
   }
 
   .values {
@@ -680,6 +836,10 @@ h2 span {
     grid-template-columns: 1fr 1fr;
   }
 
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .convoy {
     grid-template-columns: 90px 1fr;
   }
@@ -689,9 +849,9 @@ h2 span {
   }
 }
 
-/* =========================
-   PETITS ÉCRANS
-   ========================= */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 560px) {
 
@@ -711,13 +871,18 @@ h2 span {
   .values,
   .cards,
   .gallery,
-  .contact-grid {
+  .contact-grid,
+  .why-grid {
     grid-template-columns: 1fr;
   }
 
   .values > div {
     border-right: 0;
     border-bottom: 1px solid #3b2514;
+  }
+
+  .values > div:last-child {
+    border-bottom: 0;
   }
 
   .convoy {
@@ -741,122 +906,18 @@ h2 span {
     font-size: 42px;
   }
 
+  .why-quote {
+    font-size: 18px;
+    padding: 25px 18px;
+  }
+
+}
 
 /* =========================================================
-   🟠 BANNIÈRE ANIMÉE
+   ANIMATION MOBILE
    ========================================================= */
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-/* Image de la bannière */
-.hero-background {
-  position: absolute;
-  inset: -4%;
-  z-index: -3;
-
-  background-image: url("assets/banniere.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  transform: scale(1.05);
-  animation: bannerZoom 12s ease-in-out infinite alternate;
-}
-
-/* Assombrissement de l'image */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.88) 0%,
-      rgba(0,0,0,.62) 45%,
-      rgba(0,0,0,.35) 100%
-    );
-
-  pointer-events: none;
-}
-
-/* Animation lente de zoom */
-@keyframes bannerZoom {
-
-  0% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1.15);
-  }
-
-}
-
-/* Petit mouvement horizontal */
-.hero-background {
-  animation:
-    bannerZoom 12s ease-in-out infinite alternate,
-    bannerMove 18s ease-in-out infinite alternate;
-}
-
-@keyframes bannerMove {
-
-  0% {
-    background-position: 48% center;
-  }
-
-  100% {
-    background-position: 55% center;
-  }
-
-}
-
-/* Le contenu reste parfaitement fixe au-dessus */
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* Animation légère du contenu à l'arrivée */
-.hero-content {
-  animation: heroContentIn 1s ease-out;
-}
-
-@keyframes heroContentIn {
-
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-
-  .hero-background {
-    inset: -5%;
-
-    background-position: center center;
-
-    animation:
-      bannerZoomMobile 12s ease-in-out infinite alternate;
-  }
-
-}
-
 @keyframes bannerZoomMobile {
-
   0% {
     transform: scale(1.05);
   }
@@ -864,10 +925,21 @@ h2 span {
   100% {
     transform: scale(1.12);
   }
-
 }
 
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
 
-  
+@media (prefers-reduced-motion: reduce) {
 
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 
+}
