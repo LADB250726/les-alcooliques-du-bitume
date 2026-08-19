@@ -8,40 +8,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
   <script>
-  /* =========================================================
-     ✨ ANIMATION AU DÉFILEMENT
-     ========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-  const scrollElements = document.querySelectorAll(
-    '.section, .values, .card, .why-card, .why-quote, .convoy'
+  const elements = document.querySelectorAll(
+    ".section, .values, .card, .why-card, .convoy, .gallery-photo, .contact-card, .recruit-box"
   );
 
-  scrollElements.forEach(element => {
-    element.classList.add('scroll-animate');
-  });
-
-  const scrollObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-      entries.forEach(entry => {
-
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add("scroll-visible");
           observer.unobserve(entry.target);
-
         }
-
       });
-
     },
     {
       threshold: 0.15
     }
   );
 
-  scrollElements.forEach(element => {
-    scrollObserver.observe(element);
+  elements.forEach((element) => {
+    element.classList.add("scroll-hidden");
+    observer.observe(element);
   });
+
+});
 </script>
 <body>
 
