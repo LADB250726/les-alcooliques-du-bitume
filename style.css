@@ -14,6 +14,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--black);
@@ -120,7 +124,7 @@ a {
 }
 
 /* =========================================================
-   ACCUEIL / BANNIÈRE
+   ACCUEIL / BANNIÈRE ANIMÉE
    ========================================================= */
 
 .hero {
@@ -133,10 +137,11 @@ a {
   isolation: isolate;
 }
 
-/* Image de fond animée */
+/* Image animée */
+
 .hero-background {
   position: absolute;
-  inset: -5%;
+  inset: -6%;
   z-index: -3;
 
   background-image: url("assets/banniere.png");
@@ -151,7 +156,8 @@ a {
     bannerMove 18s ease-in-out infinite alternate;
 }
 
-/* Assombrissement */
+/* Overlay */
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -168,8 +174,10 @@ a {
   pointer-events: none;
 }
 
-/* Animation zoom */
+/* Zoom */
+
 @keyframes bannerZoom {
+
   0% {
     transform: scale(1.05);
   }
@@ -177,10 +185,13 @@ a {
   100% {
     transform: scale(1.15);
   }
+
 }
 
-/* Animation déplacement horizontal */
+/* Mouvement horizontal */
+
 @keyframes bannerMove {
+
   0% {
     background-position: 48% center;
   }
@@ -188,9 +199,11 @@ a {
   100% {
     background-position: 55% center;
   }
+
 }
 
-/* Dégradé inférieur */
+/* Dégradé bas de bannière */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -201,6 +214,8 @@ a {
   pointer-events: none;
 }
 
+/* Contenu */
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -209,8 +224,8 @@ a {
   animation: heroContentIn 1s ease-out;
 }
 
-/* Apparition du contenu */
 @keyframes heroContentIn {
+
   from {
     opacity: 0;
     transform: translateY(25px);
@@ -220,6 +235,7 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 .eyebrow {
@@ -395,12 +411,12 @@ h2 span {
   border: 1px solid #2b2b2b;
   padding: 28px;
   text-align: center;
-  transition: 0.2s;
+  transition: 0.25s ease;
 }
 
 .card:hover {
   border-color: var(--orange);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 .role-icon {
@@ -750,15 +766,63 @@ h2 span {
   margin: 0 !important;
 }
 
-#lightbox .lightbox-close {
-  position: fixed !important;
-  top: 20px !important;
-  right: 30px !important;
-  z-index: 1000000 !important;
-  color: white !important;
-  font-size: 50px !important;
-  line-height: 1 !important;
-  cursor: pointer !important;
+/* =========================================================
+   ANIMATIONS AU DÉFILEMENT
+   ========================================================= */
+
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cartes */
+
+.card.scroll-hidden,
+.why-card.scroll-hidden,
+.gallery-photo.scroll-hidden,
+.contact-card.scroll-hidden,
+.convoy.scroll-hidden,
+.recruit-box.scroll-hidden {
+  transform: translateY(40px) scale(0.97);
+}
+
+.card.scroll-visible,
+.why-card.scroll-visible,
+.gallery-photo.scroll-visible,
+.contact-card.scroll-visible,
+.convoy.scroll-visible,
+.recruit-box.scroll-visible {
+  transform: translateY(0) scale(1);
+}
+
+/* Délais pour donner un effet plus naturel */
+
+.why-card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.why-card:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.why-card:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.card:nth-child(3) {
+  transition-delay: 0.2s;
 }
 
 /* =========================================================
@@ -808,7 +872,7 @@ h2 span {
   }
 
   .hero-background {
-    inset: -5%;
+    inset: -6%;
     animation: bannerZoomMobile 12s ease-in-out infinite alternate;
   }
 
@@ -847,6 +911,7 @@ h2 span {
   .convoy-buttons {
     grid-column: 2;
   }
+
 }
 
 /* =========================================================
@@ -911,6 +976,10 @@ h2 span {
     padding: 25px 18px;
   }
 
+  .hero-background {
+    animation: bannerZoomMobile 14s ease-in-out infinite alternate;
+  }
+
 }
 
 /* =========================================================
@@ -918,6 +987,7 @@ h2 span {
    ========================================================= */
 
 @keyframes bannerZoomMobile {
+
   0% {
     transform: scale(1.05);
   }
@@ -925,6 +995,7 @@ h2 span {
   100% {
     transform: scale(1.12);
   }
+
 }
 
 /* =========================================================
@@ -942,54 +1013,11 @@ h2 span {
     transition-duration: 0.01ms !important;
   }
 
-/* =========================================================
-   🟠 ANIMATIONS AU DÉFILEMENT
-   ========================================================= */
-
-.scroll-hidden {
-  opacity: 0;
-  transform: translateY(45px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.scroll-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Animation légèrement différente pour les cartes */
-
-.card.scroll-hidden,
-.why-card.scroll-hidden,
-.gallery-photo.scroll-hidden,
-.contact-card.scroll-hidden {
-  transform: translateY(35px) scale(0.97);
-}
-
-.card.scroll-visible,
-.why-card.scroll-visible,
-.gallery-photo.scroll-visible,
-.contact-card.scroll-visible {
-  transform: translateY(0) scale(1);
-}
-
-
-/* Respecte les utilisateurs qui désactivent les animations */
-
-@media (prefers-reduced-motion: reduce) {
-
   .scroll-hidden,
   .scroll-visible {
     opacity: 1;
-    transform: none;
-    transition: none;
+    transform: none !important;
+    transition: none !important;
   }
 
 }
-
-
-  
-
