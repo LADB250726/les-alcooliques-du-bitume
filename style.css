@@ -1020,4 +1020,294 @@ h2 span {
     transition: none !important;
   }
 
+/* =========================================================
+   📝 FORMULAIRE CONTACT — VERSION PROFESSIONNELLE
+   ========================================================= */
+
+#contact form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 45px auto 0;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121212 0%,
+      #0d0d0d 100%
+    );
+
+  border: 1px solid #2c2c2c;
+  border-top: 2px solid var(--orange);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+#contact form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  color: #f3f3f3;
+
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* =========================================================
+   CHAMPS
+   ========================================================= */
+
+#contact form input,
+#contact form select,
+#contact form textarea {
+
+  width: 100%;
+  min-height: 52px;
+
+  padding: 14px 16px;
+
+  background: #171717;
+  color: #f3f3f3;
+
+  border: 1px solid #353535;
+  border-radius: 0;
+
+  outline: none;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #666;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+#contact form input:focus,
+#contact form select:focus,
+#contact form textarea:focus {
+
+  background: #1b1b1b;
+
+  border-color: var(--orange);
+
+  box-shadow:
+    0 0 0 2px rgba(240, 125, 0, 0.10),
+    0 5px 20px rgba(0, 0, 0, 0.25);
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+#contact form select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+#contact form textarea {
+
+  min-height: 190px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+/* Le champ message prend toute la largeur */
+
+#contact form label:has(textarea) {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   BOUTON ENVOYER
+   ========================================================= */
+
+#contact form button {
+
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  min-height: 56px;
+
+  margin-top: 2px;
+
+  padding: 15px 25px;
+
+  background: var(--orange);
+  color: #111;
+
+  border: 1px solid var(--orange);
+  border-radius: 0;
+
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact form button:hover {
+
+  background: var(--orange2);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(240, 125, 0, 0.25);
+}
+
+#contact form button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   MESSAGE DE CONFIRMATION
+   ========================================================= */
+
+#contact form + .form-success,
+#contact .form-success {
+
+  max-width: 1000px;
+
+  margin: 20px auto 0;
+
+  padding: 16px 20px;
+
+  background: rgba(0, 170, 80, 0.08);
+
+  border: 1px solid #248b54;
+  border-left: 3px solid #20c76a;
+
+  color: #ddd;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   PETIT TEXTE D'INTRODUCTION
+   ========================================================= */
+
+#contact .form-intro {
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  color: #999;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  #contact form {
+
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+
+    gap: 20px;
+  }
+
+  #contact form label:has(textarea) {
+    grid-column: auto;
+  }
+
+  #contact form button {
+    grid-column: auto;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  #contact form {
+
+    margin-top: 30px;
+
+    padding: 22px 18px;
+
+    gap: 18px;
+  }
+
+  #contact form input,
+  #contact form select,
+  #contact form textarea {
+
+    min-height: 50px;
+
+    padding: 13px 14px;
+
+    font-size: 16px;
+  }
+
+  #contact form textarea {
+    min-height: 170px;
+  }
+
+  #contact form button {
+
+    min-height: 54px;
+
+    font-size: 17px;
+  }
+
+}
+
+
+
+
+
+  
 }
