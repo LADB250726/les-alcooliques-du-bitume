@@ -748,7 +748,36 @@ why-card
 why-icon
 why-quote
 
+/* =========================================================
+   🟠 ANIMATION DE LA BANNIÈRE
+   ========================================================= */
 
+.hero {
+  animation: heroZoom 15s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    background-size: 100% 100%;
+  }
+
+  to {
+    background-size: 110% 110%;
+
+@media (max-width: 560px) {
+  .hero {
+    animation-duration: 18s;
+  }
+}
+
+
+
+
+
+    
+  }
+  }
+}
 
 
 
