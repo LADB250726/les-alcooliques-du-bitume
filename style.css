@@ -1303,6 +1303,142 @@ h2 span {
     font-size: 17px;
   }
 
+/* =========================================================
+   FORMULAIRE CONTACT - CORRECTION FORCÉE
+   ========================================================= */
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 45px auto 0;
+  padding: 40px;
+  background: #101010;
+  border: 1px solid #2d2d2d;
+  border-top: 3px solid var(--orange);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.contact-form-header {
+  margin-bottom: 30px;
+}
+
+.contact-form-header h3 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.contact-form-header h3 span {
+  color: var(--orange);
+}
+
+.contact-form-header p {
+  color: #aaa;
+  max-width: 760px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: .5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 16px;
+  background: #171717;
+  color: #f3f3f3;
+  border: 1px solid #383838;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: .2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+  background: #1b1b1b;
+  box-shadow: 0 0 0 2px rgba(240,125,0,.12);
+}
+
+.form-group textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 5px;
+}
+
+.form-submit button {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-status {
+  margin-top: 5px;
+  min-height: 24px;
+  font-size: 15px;
+}
+
+.contact-status.success {
+  padding: 14px 16px;
+  background: rgba(0,180,80,.08);
+  border: 1px solid #238b54;
+  color: #7de6a6;
+}
+
+.contact-status.error {
+  padding: 14px 16px;
+  background: rgba(220,50,50,.08);
+  border: 1px solid #a73d3d;
+  color: #ff8e8e;
+}
+
+@media (max-width: 900px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-form-wrapper {
+    padding: 24px 18px;
+  }
 }
 
 
